@@ -5,7 +5,7 @@ export TERM=xterm
 ### every exit != 0 fails the script
 #set -e
 
-wget https://chromedriver.storage.googleapis.com/104.0.5112.79/chromedriver_linux64.zip && unzip -f chromedriver_linux64.zip && chmod +x chromedriver && cp chromedriver /usr/bin/
+wget -q https://chromedriver.storage.googleapis.com/104.0.5112.79/chromedriver_linux64.zip && unzip -f chromedriver_linux64.zip && chmod +x chromedriver && cp chromedriver /usr/bin/
 
 chmod +x *
 
@@ -19,6 +19,8 @@ echo "export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[0
 #RUN echo - "ControlPort 9051\nHashedControlPassword 16:A72E5A7AE45381ED60125365E2AA85E09B56ACAEE6B6536D8DF63A2B01\nCookieAuthentication 1\nRunAsDaemon 1" >> /etc/tor/torrc
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
 echo "nameserver 8.8.4.4" >> /etc/resolv.conf
+echo -e "nameserver 8.8.8.8\nnameserver 8.8.4.4" |sudo tee -a /etc/resolv.conf
+apt update
 
 #python3 --version
 echo "Install Package - on  based ubuntu 20.04 LTS"
