@@ -5,7 +5,8 @@ export TERM=xterm
 ### every exit != 0 fails the script
 #set -e
 
-wget -q https://chromedriver.storage.googleapis.com/104.0.5112.79/chromedriver_linux64.zip && unzip -f chromedriver_linux64.zip && chmod +x chromedriver && cp chromedriver /usr/bin/
+wget -q https://chromedriver.storage.googleapis.com/104.0.5112.79/chromedriver_linux64.zip && unzip  chromedriver_linux64.zip && chmod +x chromedriver && cp chromedriver /usr/bin/
+wget https://chromedriver.storage.googleapis.com/109.0.5414.74/chromedriver_linux64.zip && unzip chromedriver_linux64.zip && chmod +x chromedriver && cp chromedriver /usr/bin/chromedriver-109
 
 chmod +x *
 
