@@ -3,7 +3,7 @@ export USER="root"
 export TERM=xterm
 
 ### every exit != 0 fails the script
-set -e
+#set -e
 
 wget https://chromedriver.storage.googleapis.com/104.0.5112.79/chromedriver_linux64.zip && unzip -f chromedriver_linux64.zip && chmod +x chromedriver && cp chromedriver /usr/bin/
 
