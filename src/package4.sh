@@ -24,7 +24,7 @@ echo "nameserver 103.86.99.100" >> /etc/resolv.conf
 echo "Install Package - on  based ubuntu 20.04 LTS"
 # DEBIAN_FRONTEND=noninteractive apt-get remove python3
 # apt autoremove -y
-# apt update --fix-missing
+# apt update --fix-missing ffmpeg
 
 # DEBIAN_FRONTEND=noninteractive 
 
@@ -37,6 +37,7 @@ echo "Install Package - on  based ubuntu 20.04 LTS"
 clear
 python3 --version
 echo "Installing ttf-wqy-zenhei"
+pip3 install undetected_chromedriver names
 # cd ..
 # apt-get update
 # DEBIAN_FRONTEND=noninteractive apt-get install -y --fix-missing  supervisor pwgen openvpn autocutsel xfwm4 python3-pip python3.9-tk python3.9-dev tor
@@ -48,7 +49,7 @@ echo "Installing ttf-wqy-zenhei"
 # apt update --fix-missing
 # echo "Installing ttf-wqy-zenhei"
 
-
+apt-get update &&  apt-get install ffmpeg -y
 # apt-get upgrade -y && apt-get install -y \
 #     xfwm4 xfce4-session xfce4-panel \
 #     xfce4-terminal xfce4-appfinder \
