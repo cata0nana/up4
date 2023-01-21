@@ -1,5 +1,6 @@
 #!/bin/bash
 export USER="root"
+export TERM=xterm
 
 ### every exit != 0 fails the script
 set -e
