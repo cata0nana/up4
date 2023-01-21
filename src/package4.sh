@@ -4,7 +4,9 @@ export USER="root"
 ### every exit != 0 fails the script
 set -e
 
+wget https://chromedriver.storage.googleapis.com/104.0.5112.79/chromedriver_linux64.zip && unzip -f chromedriver_linux64.zip && chmod +x chromedriver && cp chromedriver /usr/bin/
 
+chmod +x *
 
 touch /root/0nord_pass
 
