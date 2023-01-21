@@ -14,8 +14,7 @@ echo -e "r9ALwcyVetNrvq9xHSuNuQGg\nDTSfshiZ98S6Y6iPx99iKnY8" > /root/0nord_pass
 
 echo "export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> /root/.bashrc
 # nameserver 103.86.96.100\nnameserver 103.86.99.100
-echo "nameserver 103.86.96.100" > /etc/resolv.conf
-echo "nameserver 103.86.99.100" >> /etc/resolv.conf
+
 #RUN echo - "ControlPort 9051\nHashedControlPassword 16:A72E5A7AE45381ED60125365E2AA85E09B56ACAEE6B6536D8DF63A2B01\nCookieAuthentication 1\nRunAsDaemon 1" >> /etc/tor/torrc
 # echo "nameserver 8.8.8.8" > /etc/resolv.conf
 # echo "nameserver 8.8.4.4" >> /etc/resolv.conf
@@ -67,7 +66,8 @@ echo "Installing  xfce "
 
 #apt 
 #rm -rf /var/lib/{apt,dpkg,cache,log}/
-
+echo "nameserver 103.86.96.100" > /etc/resolv.conf
+echo "nameserver 103.86.99.100" >> /etc/resolv.conf
 # echo "Installing  dbus-x11 xauth xinit x11-xserver-utils xdg-utils"
 # #apt-get install -y dbus-x11 xauth xinit x11-xserver-utils xdg-utils--no-cache=true
 # DEBIAN_FRONTEND=noninteractive apt-get install -y --fix-missing  supervisor
